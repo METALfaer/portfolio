@@ -1,6 +1,8 @@
 import './App.css';
 import styled from 'styled-components';
 import {Header} from "./layout/header/Header";
+import {Main} from "./layout/section/main/Main";
+import {Skills} from "./layout/section/skills/Skills";
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
                 <Field/>
             </Form>*/}
             <Header/>
+            <Main/>
+            <Skills/>
         </div>
     );
 }
@@ -40,3 +44,5 @@ const Field = styled.input`
   width: 100%;
   font-size: 1rem;
 `;*/
+
+
