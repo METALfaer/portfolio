@@ -18,6 +18,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.font};
   line-height: 1.2;
+  
+  min-height: 360px;
 };
 
  a {
@@ -39,6 +41,10 @@ body {
  
  section{
     padding: 100px 0;
+    
+    @media ${theme.media.mobile}{
+      padding: 80px;
+    }
  }
  
  section:nth-of-type(odd){

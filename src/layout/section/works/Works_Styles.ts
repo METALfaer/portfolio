@@ -1,30 +1,17 @@
-import React from 'react';
-import {Link} from "../../../../components/Link";
-import {Button} from "../../../../components/Button";
-import {S} from '../Works_Styles';
+import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../styles/Theme";
+import {Link} from "../../../components/Link";
+import {Button} from "../../../components/Button";
 
-type WorkPropsType = {
-    title: string
-    text: string
-    src: string
-}
-export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
-    return (
-        <S.Work>
-            <S.ImageWrapper>
-                <S.Image src={props.src} alt=""/>
-                <Button>view project</Button>
-            </S.ImageWrapper>
-            <S.Description>
-                <S.Title>{props.title}</S.Title>
-                <S.Text>{props.text}</S.Text>
-                <Link href={'#'}>demo</Link>
-                <Link href={'#'}>code</Link>
-            </S.Description>
-        </S.Work>
-    );
-};
-/*const StyledWork = styled.section`
+const Works = styled.section`
+  ${FlexWrapper}{
+    gap: 30px;
+  }
+   
+`
+
+const Work = styled.section`
     background-color: ${theme.colors.secondaryBg};
     width: 330px;
     flex-grow: 1;
@@ -41,7 +28,6 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
       max-width: 540px;
     }
 `
-
 const ImageWrapper = styled.div`
   position: relative;
   
@@ -74,7 +60,7 @@ const ImageWrapper = styled.div`
     &::before{
       opacity: 1;
     }
-   /!* &::before {
+   /* &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -83,7 +69,7 @@ const ImageWrapper = styled.div`
       bottom: 0;
       background: rgba(0,0,0,0.3);
       backdrop-filter: blur(4px);
-    }*!/
+    }*/
     
     ${Button}{
       opacity: 1;
@@ -100,7 +86,6 @@ const ImageWrapper = styled.div`
     }
   }
 `
-
 const Image = styled.img`
   //width: 100vh;
   height: 260px;
@@ -112,8 +97,16 @@ const Title = styled.h3`
 const Text = styled.p`
   margin: 14px 0 10px;
 `
-
 const Description = styled.div`
   padding: 25px 20px;
-`*/
+`
 
+export const S={
+    Works,
+    Work,
+    ImageWrapper,
+    Image,
+    Title,
+    Text,
+    Description,
+}

@@ -1,16 +1,18 @@
 import React from 'react';
-import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {Menu} from "../menu/Menu";
+import {S} from './../HeaderMenu_Styles'
 
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (
+    props: { menuItems: Array<string> }) => {
     return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={false}>
+        <S.StyledMobileMenu>
+            <S.BurgerButton isOpen={false}>
                 <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={false}>
-                <ul>
+            </S.BurgerButton>
+            <S.MobileMenuPopup isOpen={false}>
+                <Menu menuItems={props.menuItems}/>
+                {/*<ul>
                     {
                         props.menuItems.map((item, index) => {
                             return <ListItem key={index}>
@@ -26,18 +28,14 @@ export const MobileMenu = (props: { menuItems: Array<string> }) => {
                             </ListItem>
                         })
                     }
-                </ul>
-            </MobileMenuPopup>
-        </StyledMobileMenu>
+                </ul>*/}
+            </S.MobileMenuPopup>
+        </S.StyledMobileMenu>
     );
 };
 
-const StyledMobileMenu = styled.nav`
-  display: none;
-  
-  @media ${theme.media.tablet} {
-      display: block;
-   }
+/*const StyledMobileMenu = styled.nav`
+ 
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -116,10 +114,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
   }
 
-`
+`*/
 
 
-const Link = styled.a`
+/*const Link = styled.a`
    font-family: 'Josefin Sans', sans-serif;
    font-weight: 400;
    font-size: 30px;
@@ -178,6 +176,6 @@ const ListItem = styled.li`
             }
         }
     }
-`
+`*/
 
 

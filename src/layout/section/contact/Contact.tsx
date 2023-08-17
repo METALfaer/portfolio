@@ -1,27 +1,26 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
+import {S} from './Contact_Styles';
 
-export const Contact = () => {
+export const Contact:React.FC = () => {
     return (
-        <StyledContact>
+        <S.Contact>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
-                <StyledForm>
-                    <Fild placeholder={'name'}/>
-                    <Fild placeholder={'subject'}/>
-                    <Fild placeholder={'message'} as={'textarea'}/>
+                <S.Form>
+                    <S.Fild placeholder={'name'}/>
+                    <S.Fild placeholder={'subject'}/>
+                    <S.Fild placeholder={'message'} as={'textarea'}/>
                     <Button type={'submit'}>Sand message</Button>
-                </StyledForm>
+                </S.Form>
             </Container>
-        </StyledContact>
+        </S.Contact>
     );
 };
 
-const StyledContact = styled.section`
+/*const StyledContact = styled.section`
 
 `
 const StyledForm = styled.form`
@@ -60,4 +59,4 @@ const Fild = styled.input`
   &:focus-visible{
     outline: 1px solid ${theme.colors.borderColor};
   }
-`
+`*/

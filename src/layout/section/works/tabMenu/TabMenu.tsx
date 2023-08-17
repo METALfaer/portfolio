@@ -20,11 +20,14 @@ export const TabMenu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledTabMenu = styled.nav`
-    margin: 40px;
+    
     ul {
         display: flex;
-        gap: 20px;
-        justify-content: center;
+        justify-content: space-between;
+        max-width: 352px;
+        width: 100%;
+        border: 1px solid red;
+        margin: 0 auto 40px;
     }
 `
 const ListItem = styled.li`

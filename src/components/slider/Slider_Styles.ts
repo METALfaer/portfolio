@@ -1,26 +1,7 @@
-import React from 'react';
-import {FlexWrapper} from "../FlexWrapper";
-import {S} from './Slider_Styles';
+import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
-export const Slider: React.FC = () => {
-    return (
-        <S.Slider>
-            <FlexWrapper>
-                <S.Slide>
-                    <S.Text>WWWWWWWWWWWWWWWWWWWW</S.Text>
-                    <S.Name>Name Names</S.Name>
-                </S.Slide>
-            </FlexWrapper>
-            <S.Pagination>
-                <span></span>
-                <span className={'active'}></span>
-                <span></span>
-            </S.Pagination>
-        </S.Slider>
-    );
-};
-
-/*const StyledSlider = styled.div`
+const Slider = styled.div`
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -63,4 +44,12 @@ const Pagination = styled.span`
           width: 20px;
         }
     }
-`*/
+`
+
+export const S={
+    Slider,
+    Slide,
+    Text,
+    Name,
+    Pagination,
+}

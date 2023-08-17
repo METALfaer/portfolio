@@ -1,33 +1,8 @@
-import React from 'react';
-import photo from '../../../assets/images/Ruslan.jpg'
-import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Container} from "../../../components/Container";
-import {S} from './Main_Styles';
+import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
-
-export const Main: React.FC = () => {
-    return (
-        <S.Main>
-            <Container>
-                <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
-                    <div>
-                        <S.SmallText>Hi there</S.SmallText>
-                        <S.Name>
-                            I am
-                            <span>Ruslan Konychev</span>
-                        </S.Name>
-                        <S.MainTitle>The Web Deweloper</S.MainTitle>
-                    </div>
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo} alt=""/>
-                    </S.PhotoWrapper>
-                </FlexWrapper>
-            </Container>
-        </S.Main>
-    );
-};
-
-/*const StyledMain = styled.section`
+const Main = styled.section`
     min-height: 100vh;
     display: flex;
 `
@@ -74,8 +49,8 @@ const Photo = styled.img`
 `
 
 const MainTitle = styled.h1`
-    /!*font-weight: 400;
-    font-size: 27px; *!/
+    /*font-weight: 400;
+    font-size: 27px; */ 
     ${font({
     weight: 400,
     Fmax: 27,
@@ -85,14 +60,14 @@ const MainTitle = styled.h1`
 
 const Name = styled.h2`
     ${font({
-    family: "'Josefin Sans', sans-serif",
-    weight: 700,
-    Fmax: 50,
-    Fmin: 36,
-})};
-    /!*font-family: 'Josefin Sans', sans-serif;
+        family: "'Josefin Sans', sans-serif",
+        weight: 700,
+        Fmax: 50,
+        Fmin: 36,
+    })};
+    /*font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    font-size: 50px;*!/
+    font-size: 50px;*/
     letter-spacing: 0.05em;
     margin: 10px 0;
     
@@ -123,4 +98,13 @@ const SmallText = styled.h2`
     font-weight: 400;
     font-size: 14px;
     
-`*/
+`
+
+export const S= {
+    Main,
+    PhotoWrapper,
+    Photo,
+    MainTitle,
+    Name,
+    SmallText,
+}
