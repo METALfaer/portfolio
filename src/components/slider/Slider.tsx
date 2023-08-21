@@ -1,8 +1,36 @@
 import React from 'react';
-import {FlexWrapper} from "../FlexWrapper";
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
 import {S} from './Slider_Styles';
+import './Slider.css'
 
-export const Slider: React.FC = () => {
+type SlideType={
+    text:string
+    userName:string
+}
+const Slide = (props:SlideType) => {
+    return (
+        <S.Slide>
+            <S.Text>{props.text}</S.Text>
+            <S.Name>@{props.userName}</S.Name>
+        </S.Slide>
+    )
+}
+const items = [
+    <Slide text={'WWWWWWWWWWWWWWWWWWWW'} userName={'raz'}/>,
+    <Slide text={'rrrrrrrrrrrrrrrrrrrrrr'} userName={'dwa'}/>,
+    <Slide text={'tttttttttttttttttttttttttttt'} userName={'tri'}/>,
+
+]
+export const Slider = () => (
+    <S.Slider>
+        <AliceCarousel
+            mouseTracking
+            items={items}/>
+    </S.Slider>
+)
+
+/*export const Slider: React.FC = () => {
     return (
         <S.Slider>
             <FlexWrapper>
@@ -18,7 +46,7 @@ export const Slider: React.FC = () => {
             </S.Pagination>
         </S.Slider>
     );
-};
+};*/
 
 /*const StyledSlider = styled.div`
     max-width: 500px;

@@ -56,15 +56,18 @@ const MainTitle = styled.h1`
     Fmax: 27,
     Fmin: 20,
 })};
+    p {
+      display: none;
+    }
 `
 
 const Name = styled.h2`
     ${font({
-        family: "'Josefin Sans', sans-serif",
-        weight: 700,
-        Fmax: 50,
-        Fmin: 36,
-    })};
+    family: "'Josefin Sans', sans-serif",
+    weight: 700,
+    Fmax: 50,
+    Fmin: 36,
+})};
     /*font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
     font-size: 50px;*/
@@ -100,7 +103,7 @@ const SmallText = styled.h2`
     
 `
 
-export const S= {
+export const S = {
     Main,
     PhotoWrapper,
     Photo,

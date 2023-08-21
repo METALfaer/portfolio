@@ -15,7 +15,7 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (
             <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
             </S.BurgerButton>
-            <S.MobileMenuPopup isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
+            <S.MobileMenuPopup isOpen={menuIsOpen} onClick={()=>setMenuIsOpen(false)}>
                 <Menu menuItems={props.menuItems}/>
                 {/*<ul>
                     {
